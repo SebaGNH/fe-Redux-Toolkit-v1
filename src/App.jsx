@@ -4,7 +4,7 @@ import { decrement, increment,incrementByAmount,decrementByAmount } from './stor
 
 const App = () => {
 
-  //const counter = useSelector((state) => state.counter.value)
+
   const counter = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
 
