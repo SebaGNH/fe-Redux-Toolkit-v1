@@ -20,3 +20,4 @@ export const pokemonSlice = createSlice({
 
 export const { startLoadingPokemons, setPokemons } = pokemonSlice.actions
 
+//Thumbns, funciones que despachan una acción o tarea asincrona
