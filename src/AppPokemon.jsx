@@ -7,16 +7,37 @@ const AppPokemon = () => {
   //const counter = useSelector((state) => state.counter.value)
   //const dispatch = useDispatch();
 
+  
+
+
   const dispatch = useDispatch();
+  const {page,isLoading,pokemons} = useSelector((state) => state.pokemons);
+  //console.log(page)
   useEffect(() => {
     dispatch(getPokemons())
+    
   }, [])
   
 
   return (
     <div className='container'>
 
-    Pokemon
+      <h1>Pokemon</h1>
+
+      <span>Loading: {!isLoading? "true" : "false" }</span>
+
+      <ul>
+        {
+          pokemons.map((pokemon) => (
+            <li key={pokemon.name}>{pokemon.name}</li>
+          ))
+        }
+      </ul>
+      <button
+        className='btn btn-success'
+        disabled={isLoading}
+        onClick={()=> dispatch(getPokemons(page))}
+      >Next</button>
 
     </div>
   )
