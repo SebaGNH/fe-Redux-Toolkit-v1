@@ -12,7 +12,7 @@ const AppPokemon = () => {
 
   const dispatch = useDispatch();
   const {page,isLoading,pokemons} = useSelector((state) => state.pokemons);
-  //console.log(page)
+  console.log(page)
   useEffect(() => {
     dispatch(getPokemons())
     
