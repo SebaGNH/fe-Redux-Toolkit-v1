@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
+import { Pokemon } from './components/Pokemon';
 import { startLoadingPokemons, setPokemons, getPokemons } from './store/slices/pokemon'
+
 
 const AppPokemon = () => {
   //Son del use Counter
@@ -26,13 +28,13 @@ const AppPokemon = () => {
 
       <span>Loading: {!isLoading? "true" : "false" }</span>
 
-      <ul>
+
         {
           pokemons.map((pokemon) => (
-            <li key={pokemon.name}>{pokemon.name}</li>
+            <Pokemon key={pokemon.name} pokemon={pokemon}/>
           ))
         }
-      </ul>
+
       <button
         className='btn btn-success'
         disabled={isLoading}
