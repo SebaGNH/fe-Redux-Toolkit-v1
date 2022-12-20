@@ -23,17 +23,19 @@ const AppPokemon = () => {
 
   return (
     <div className='container'>
-
+      <div className="row">
       <h1>Pokemon</h1>
 
       <span>Loading: {!isLoading? "true" : "false" }</span>
 
+      <div className="d-flex justify-content-arround flex-wrap">
 
         {
           pokemons.map((pokemon) => (
             <Pokemon key={pokemon.name} pokemon={pokemon}/>
           ))
         }
+      </div>
 
       <button
         className='btn btn-success'
@@ -41,6 +43,7 @@ const AppPokemon = () => {
         onClick={()=> dispatch(getPokemons(page))}
       >Next</button>
 
+    </div>
     </div>
   )
 }

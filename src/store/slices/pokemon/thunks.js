@@ -16,8 +16,8 @@ export const getPokemons = (page = 0) => {
     //console.log(data)
 
     //const data = await pokemonAPI.get(`/pokemon?offset=${page*10}&limit=10`);
-    const {data} = await pokemonAPI.get(`/pokemon?offset=${page*10}&limit=10`);
-    //console.log(data.results)
+    const {data} = await pokemonAPI.get(`/pokemon?offset=${page*9}&limit=9`);
+    console.log(data.results)
 
 
     dispatch(setPokemons({pokemons: data.results, page: page+1}));

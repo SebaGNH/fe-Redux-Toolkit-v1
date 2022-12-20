@@ -3,7 +3,7 @@ import React from 'react'
 export const Pokemon = ({pokemon}) => {
   return (
     <>
-    <div className="card border-primary mb-3 bg-secondary" >
+    <div className="card border-primary mb-3 bg-secondary m-2" style={{ width: '13rem' }}>
       <div className="card-header">{pokemon.name}</div>
       <div className="card-body">
         <h4 className="card-title">Primary card title</h4>
